@@ -46,24 +46,24 @@ def list_posts():
     return response.json()
 
 # Kullanım örnekleri
-print("CREATE: Yeni Post Oluştur")
-new_post = create_post("Yeni Başlık", "Bu bir içeriktir.", 1)
+print("Create İşlemi")
+new_post = create_post("Yeni Başlık", "Yeni içerik eklendi", 1)
 pprint(new_post)
 
 post_id = new_post['id']  # Yeni oluşturulan postun ID'si
 
-print("\nREAD: Postu Görüntüle")
+print("Read İşlemi")
 post = get_post(post_id)
 pprint(post)
 
-print("\nUPDATE: Postu Güncelle")
+print("Update İşlemi")
 updated_post = update_post(post_id, title="Güncellenmiş Başlık")
 pprint(updated_post)
 
-print("\nDELETE: Postu Sil")
+print("Silme İşlemi")
 deleted = delete_post(post_id)
 print(f"Post başarıyla silindi: {deleted}")
 
-print("\nLIST: Tüm Postlar")
+print("Listeleme İşlemi")
 posts = list_posts()
 pprint(posts)
