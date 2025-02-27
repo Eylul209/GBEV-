@@ -6,6 +6,7 @@ pprint: JSON verilerini güzel bir şekilde (pretty print) yazdırmak için kull
 """
 
 # API endpoint
+endpoint = 'https://jsonplaceholder.typicode.com/posts'
 
 def create_post(title, body, user_id):
     data = {
